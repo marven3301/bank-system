@@ -13,7 +13,7 @@ ation)
 
 This is a simple 
 1. Clone the repository.
-2. Install dependencies withs a simple console-ba
+2. Install dependencies withs a simple console-bash
 3. Run the main script usingole Application)
 
 
