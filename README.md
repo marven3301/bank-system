@@ -1,95 +1,26 @@
-# 💰 Bank System (Python)
+# Simple Banking System (Console Application)
 
-A simple console application simulating a basic bank system. It allows you to create clients, manage balances, make transfers, and search for users.
+This is a simple console-based banking system implemented in **Python**. It simulates basic banking operations such as creating clients, depositing and withdrawing money, viewing client balances, and listing all clients with sorting options. The project uses theting and wilibrary to generate realistic fake client data including names, addresses, and phone numbers.
+mplemented in **Python**. 
+- Creating new clients with automatically generated data
+- Depositing money into a client's account.
+- Withdrawing money with balance validation.
+- Viewing detailed client information by client ID.
+- Displaying all clients with options to sort by balance or by the order clients were added.
+- A simple text menu running in an infinite loop with input validation and error handling.
+e realistic fake client Python 3, Faker, random, time modules.
+ation)
 
----
+This is a simple 
+1. Clone the repository.
+2. Install dependencies withs a simple console-bash
+3. Run the main script usingole Application)
 
-## 📌 Features
 
-- 👤 Create new clients
-- 💵 Deposit and withdraw funds
-- 🔁 Transfer money between clients
-- 📊 View client balance
-- 🔍 Search clients by ID
-- 📚 (Planned) Data saving and transaction history
 
----
+The project is split into modules for client creation, money operations, client lookup, and client listing for better organization and readability.
+rations such as creating clients,include saving client data to JSON files, adding transaction history, and enhancing the user interface.
 
-## 🖼️ Example Usage
+Feel free to open issues or contribute suggestions!
 
-```
-=== Bank System ===
-1. Create a new client
-2. Deposit money
-3. Withdraw money
-4. Transfer money
-5. Check balance
-6. Find client
-7. Exit
-Choose an option: _
-```
-
----
-
-## 🚀 Getting Started
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/marven3301/bank-system
-cd bank-system
-```
-
-2. (Optional) Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the application:
-
-```bash
-python main.py
-```
-
----
-
-## 📂 Project Structure
-
-```
-bank-system/
-├── main.py               # Main menu interface
-├── create_client.py      # Client creation logic
-├── money_operations.py   # Deposit, withdraw, transfer functions
-├── id_check.py           # Client ID validation and lookup
-├── search.py             # Sorting clients
-├── README.md
-└── requirements.txt
-```
-
----
-
-## 🧩 Planned Improvements
-
-- [ ] Save/load client data from JSON
-- [ ] Add transaction history per client
-- [ ] Export client data to CSV
-- [ ] Unit testing with unittest or pytest
-- [ ] Refactor using OOP (classes)
-- [ ] Improved console UI (e.g., using `colorama`)
-
----
-
-## 🛠️ Built With
-
-- Python 3.10+
-- [Faker](https://faker.readthedocs.io/en/master/) — for generating mock data
-
----
-
-## 🤝 Contact
-
-Developer: [@marven3301](https://github.com/marven3301)  
-Feel free to open issues, give feedback, or submit pull requests!
-
----
+© 2025 Daniel's Banking System
