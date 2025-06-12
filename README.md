@@ -1,7 +1,8 @@
 # Simple Banking System (Console Application)
 
 This is a simple console-based banking system implemented in **Python**. It simulates basic banking operations such as creating clients, depositing and withdrawing money, viewing client balances, and listing all clients with sorting options. The project uses theting and wilibrary to generate realistic fake client data including names, addresses, and phone numbers.
-mplemented in **Python**. I- Creating new clients with automatically generated data
+mplemented in **Python**. 
+- Creating new clients with automatically generated data
 - Depositing money into a client's account.
 - Withdrawing money with balance validation.
 - Viewing detailed client information by client ID.
@@ -12,7 +13,7 @@ ation)
 
 This is a simple 
 1. Clone the repository.
-2. Install dependencies withs a simple console-ba
+2. Install dependencies withs a simple console-bash
 3. Run the main script usingole Application)
 
 
