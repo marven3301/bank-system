@@ -7,31 +7,33 @@ from all_clients import show_all_clients
 
 clients = []
 
-
+print("Welcome to Daniel's banking system")
 while True:
-    print("Welcome to Daniel's banking system\n"
-          "1. Add new client\n"
+    print("1. Add new client\n"
           "2. Deposit money\n"
           "3. Withdraw money\n"
-          "4. Check client by ID\n"
-          "5. All clients\n"
+          "4. Transfer money from one client to another\n"
+          "5. Check client by ID\n"
+          "6. All clients\n"
           "To exit press 0")
     val = input(">>> ")
-    if val == "1":
+    if val == "1": # new client adding
         print("Adding new client, please stand by...")
         time.sleep(0.7)
         new_client(clients)
         print("New client was added")
         time.sleep(0.8)
-    elif val == "2":
+    elif val == "2": # depositing money
         money_operations.deposit_money(clients)
         time.sleep(0.8)
-    elif val == "3":
+    elif val == "3": # withdrawing money
         money_operations.withdraw_money(clients)
         time.sleep(0.8)
-    elif val == "4":
+    elif val == "4": # transfer money from one client to another
+        money_operations.money_transfer(clients)
+    elif val == "5": #client ID checking
         check_client_id(clients)
-    elif val == "5":
+    elif val == "6": # all clients table
         print(">>>All clients menu<<<\n"
               "1. All clients table(from new to old)\n"
               "2. All clients table(From most money to least)\n"
@@ -40,16 +42,19 @@ while True:
             val1 = input(">>>")
             if val1 == "1":
                 show_all_clients(clients, sort_order=0)
+                time.sleep(1)
             elif val1 == "2":
                 show_all_clients(clients, sort_order=1)
+                time.sleep(1)
             elif val1 == "3":
                 show_all_clients(clients, sort_order=2)
+                time.sleep(1)
             else:
                 print("Wrong value")
 
         except ValueError:
             print("Wrong number")
-    elif val == "0":
+    elif val == "0": # exiting the programm
         print("See you later...")
         time.sleep(0.8)
         break

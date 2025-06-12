@@ -2,8 +2,9 @@ from faker import Faker
 from random import randint
 
 faker = Faker()
-
+#new fake client adding function
 def new_client(clients):
+    # client dictionary
     client = {
         "id": randint(1000, 9999),
         "name": faker.first_name(),
@@ -13,12 +14,12 @@ def new_client(clients):
         "balance": 0.0
     }
     clients.append(client)
-
-    print("New client created:")
-    print(f"ID: {client['id']}")
-    print(f"Name: {client['name']} {client['surname']}")
-    print(f"Address: {client['address']}")
-    print(f"Phone: {client['phone']}")
-    print(f"Balance: ${client['balance']:.2f}\n")
+    # new client information
+    print("New client created:\n"
+          f"ID: {client['id']}\n"
+          f"Name: {client['name']} {client['surname']}\n"
+          f"Address: {client['address']}\n"
+          f"Phone: {client['phone']}\n"
+          f"Balance: ${client['balance']:.2f}\n")
 
     return client
