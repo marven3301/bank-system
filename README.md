@@ -5,6 +5,7 @@ mplemented in **Python**.
 - Creating new clients with automatically generated data
 - Depositing money into a client's account.
 - Withdrawing money with balance validation.
+- Transferring money fron client to other client 
 - Viewing detailed client information by client ID.
 - Displaying all clients with options to sort by balance or by the order clients were added.
 - A simple text menu running in an infinite loop with input validation and error handling.
