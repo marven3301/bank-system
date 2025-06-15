@@ -17,4 +17,3 @@ def check_client_id(clients):
                   f"Balance: ${client['balance']:.2f}\n"
                   "_________________________________\n")
             return
-

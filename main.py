@@ -1,15 +1,22 @@
 import time
-from fake_client import new_client
+import fake_client
 import money_operations
 from id_check import check_client_id
 from all_clients import show_all_clients
+import json
 
+# trying to open file in json, if not possible adding the list with clients
+try:
+    with open("clients_data.json", "r") as file:
+        clients = json.load(file)
+except FileNotFoundError:
+    clients = []
 
-clients = []
+wrong = "Wrong value"
 
 print("Welcome to Daniel's banking system")
 while True:
-    print("1. Add new client\n"
+    print("1. Add/Delete a client\n"
           "2. Deposit money\n"
           "3. Withdraw money\n"
           "4. Transfer money from one client to another\n"
@@ -17,12 +24,25 @@ while True:
           "6. All clients\n"
           "To exit press 0")
     val = input(">>> ")
-    if val == "1": # new client adding
-        print("Adding new client, please stand by...")
-        time.sleep(0.7)
-        new_client(clients)
-        print("New client was added")
-        time.sleep(0.8)
+    if val == "1":
+        choose = input("1. Add new client\n"
+                           "2. Delete the client\n"
+                           "Press q to exit\n"
+                            ">>>")
+        # new client adding
+        if choose == "1": # client adding
+            print("Adding new client, please stand by...")
+            time.sleep(0.7)
+            fake_client.new_client(clients)
+            print("New client was added")
+            time.sleep(0.8)
+        elif choose == "2": # client deleting
+            fake_client.delete_client(clients)
+        elif choose.upper() == "Q": #exiting
+            continue
+        else:
+            print(wrong)
+
     elif val == "2": # depositing money
         money_operations.deposit_money(clients)
         time.sleep(0.8)
@@ -50,7 +70,7 @@ while True:
                 show_all_clients(clients, sort_order=2)
                 time.sleep(1)
             else:
-                print("Wrong value")
+                print(wrong)
 
         except ValueError:
             print("Wrong number")
@@ -59,4 +79,4 @@ while True:
         time.sleep(0.8)
         break
     else:
-        print("Wrong value")
+        print(wrong)

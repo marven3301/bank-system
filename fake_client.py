@@ -1,3 +1,4 @@
+import json
 from faker import Faker
 from random import randint
 
@@ -13,7 +14,11 @@ def new_client(clients):
         "phone": faker.phone_number(),
         "balance": 0.0
     }
+    # save client in json
     clients.append(client)
+    with open("clients_data.json", "w") as file:
+        json.dump(clients, file, indent=4)
+
     # new client information
     print("New client created:\n"
           f"ID: {client['id']}\n"
@@ -23,3 +28,22 @@ def new_client(clients):
           f"Balance: ${client['balance']:.2f}\n")
 
     return client
+
+
+def delete_client(clients):
+    # ID inputting
+    try:
+        client_id = int(input("Please add ID of a client: "))
+    except ValueError:
+        print("No client with such ID")
+        return
+    # Search the client by ID
+    for client in clients:
+        if client["id"] == client_id:
+            clients.remove(client) # removing the client from list
+            with open("clients_data.json", "w") as file:
+                json.dump(clients, file, indent=4) # removing the client from json
+                print(f"Client with ID{client['id']} was deleted")
+                return
+
+    print("Client not found")

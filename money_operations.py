@@ -79,4 +79,3 @@ def money_transfer(clients):
     except ValueError:
         print("Invalid Input")
         return
-
