@@ -6,7 +6,7 @@ import json
 
 # trying to open file in json, if not possible adding the list with clients
 try:
-    with open("../data/clients_data.json", "r") as file:
+    with open("clients_data.json", "r") as file:
         clients = json.load(file)
 except FileNotFoundError:
     clients = []

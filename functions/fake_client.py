@@ -16,7 +16,7 @@ def new_client(clients):
     }
     # save client in json
     clients.append(client)
-    with open("../data/clients_data.json", "w") as file:
+    with open("clients_data.json", "w") as file:
         json.dump(clients, file, indent=4)
 
     # new client information
@@ -41,7 +41,7 @@ def delete_client(clients):
     for client in clients:
         if client["id"] == client_id:
             clients.remove(client) # removing the client from list
-            with open("../data/clients_data.json", "w") as file:
+            with open("clients_data.json", "w") as file:
                 json.dump(clients, file, indent=4) # removing the client from json
                 print(f"Client with ID{client['id']} was deleted")
                 return
