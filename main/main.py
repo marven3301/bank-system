@@ -1,13 +1,12 @@
 import time
-import fake_client
-import money_operations
-from id_check import check_client_id
-from all_clients import show_all_clients
+from functions import fake_client, money_operations
+from functions.id_check import check_client_id
+from functions.all_clients import show_all_clients
 import json
 
 # trying to open file in json, if not possible adding the list with clients
 try:
-    with open("clients_data.json", "r") as file:
+    with open("../data/clients_data.json", "r") as file:
         clients = json.load(file)
 except FileNotFoundError:
     clients = []
