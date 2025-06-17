@@ -88,7 +88,7 @@ bank-system/
 
 ## ✨ To-Do / Planned Features
 
-- [ ] JSON-based saving/loading of client data
+- [ ] JSON-based saving/loading of client data (done)
 - [ ] Transaction history per client
 - [ ] Export client data to CSV
 - [ ] Unit tests with `unittest` or `pytest`
