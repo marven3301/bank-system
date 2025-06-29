@@ -1,0 +1,28 @@
+[
+    {
+        "id": 2859,
+        "name": "Ryan",
+        "surname": "Nelson",
+        "address": "182 Jones Mall\nNorth Lisaborough, CT 80138",
+        "phone": "+1-861-533-8210x8170",
+        "balance": 0.0
+    },
+    {
+        "id": 8573,
+        "name": "Melanie",
+        "surname": "Bird",
+        "address": "048 Callahan Valleys\nShaunland, VT 94155",
+        "phone": "(462)254-0173x88041",
+        "balance": 0.0,
+        "history": []
+    },
+    {
+        "id": 2596,
+        "name": "Chad",
+        "surname": "Trevino",
+        "address": "00069 Timothy Squares Suite 728\nJeromefurt, NH 26196",
+        "phone": "824-767-9950",
+        "balance": 0.0,
+        "history": []
+    }
+]

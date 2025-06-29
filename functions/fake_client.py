@@ -12,7 +12,8 @@ def new_client(clients):
         "surname": faker.last_name(),
         "address": faker.address(),
         "phone": faker.phone_number(),
-        "balance": 0.0
+        "balance": 0.0,
+        "history": []
     }
     # save client in json
     clients.append(client)

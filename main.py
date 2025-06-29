@@ -14,13 +14,18 @@ except FileNotFoundError:
 wrong = "Wrong value"
 
 print("Welcome to Daniel's banking system")
+for i in range(4):
+    print(f"\rLoading {'.' * i}", end='')
+    time.sleep(0.5)
+
 while True:
-    print("1. Add/Delete a client\n"
+    print("\n1. Add/Delete a client\n"
           "2. Deposit money\n"
           "3. Withdraw money\n"
           "4. Transfer money from one client to another\n"
           "5. Check client by ID\n"
           "6. All clients\n"
+          "7. Check money operation history\n"
           "To exit press 0")
     val = input(">>> ")
     if val == "1":
@@ -72,10 +77,15 @@ while True:
                 print(wrong)
 
         except ValueError:
-            print("Wrong number")
+           print("Wrong number")
+
+    elif val == "7":
+        money_operations.show_client_history(clients)
+        time.sleep(1)
     elif val == "0": # exiting the programm
-        print("See you later...")
-        time.sleep(0.8)
+        for i in range(3):
+            print(f"\rSee you later {'.' * i}", end='')
+            time.sleep(0.5)
         break
     else:
         print(wrong)
